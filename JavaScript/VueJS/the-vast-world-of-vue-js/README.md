@@ -13,3 +13,8 @@ form input
 ### 3. Rendering Lists of Data
 
 Render each item/key of an array of data on the page.
+
+### 4. Vue's Event System
+
+Listening for events is a basic requirement for any client-side work.
+Simple example code of using events in Vue.
