@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Learning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <!-- <div id="demo">
+        <h1>{{ message | reverse true }}</h1>
+    </div>
+
+    <div id="demo2">
+        <h1>{{ message | reverse }}</h1>
+    </div> -->
+
+    <div id="demo">
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" v-model="gender" value="all"> All
+            </label>
+        </div>
+
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" v-model="gender" value="male"> Male
+            </label>
+        </div>
+
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" v-model="gender" value="female"> Female
+            </label>
+        </div>
+
+        <ul>
+            <li v-repeat="people | gender">{{ name}} : {{ gender }}</li>
+        </ul>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.16/vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

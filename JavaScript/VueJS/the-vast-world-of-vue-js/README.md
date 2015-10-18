@@ -26,3 +26,7 @@ Small toy project to review the basic interactions.
 ### 6. Easy Filtering and Ordering
 
 Demo of using built in ordering and filtering functionality.
+
+### 7. Custom Filters
+
+Create local and global custom filters for use in applications.
