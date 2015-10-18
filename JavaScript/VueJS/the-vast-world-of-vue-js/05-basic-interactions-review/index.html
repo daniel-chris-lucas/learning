@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Learning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <article id="post" class="container" v-show="isVisible">
+        <button class="glyphicon glyphicon-remove-sign pull-right"
+                v-on="click: isVisible = false"></button>
+
+        <h1>Some Post</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat vero rem 
+            omnis inventore dolorem possimus veritatis nisi modi voluptates ea ipsum 
+            totam eum dicta ipsa provident rerum ut sapiente, neque saepe cupiditate, 
+            veniam incidunt ducimus illum autem. Dolores provident deserunt alias eos, voluptas, consectetur, praesentium unde nostrum soluta quam doloribus, mollitia necessitatibus magnam vero libero ad et voluptates beatae fugiat porro.
+        </p>
+
+        <button type="button"
+                class="btn btn-default btn-lg"
+                v-class="btn-success: liked"
+                v-on="click: toggleLike"
+        >
+            <span class="glyphicon glyphicon-thumbs-up"></span> 
+            {{ likesCount }}
+        </button>
+
+        <br><br>
+
+        <pre>
+            {{ $data | json }}
+        </pre>
+    </article>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.16/vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

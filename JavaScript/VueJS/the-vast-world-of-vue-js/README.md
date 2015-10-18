@@ -18,3 +18,7 @@ Render each item/key of an array of data on the page.
 
 Listening for events is a basic requirement for any client-side work.
 Simple example code of using events in Vue.
+
+### 5. Basic Interactions Review
+
+Small toy project to review the basic interactions.
