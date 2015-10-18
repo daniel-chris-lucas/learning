@@ -22,3 +22,7 @@ Simple example code of using events in Vue.
 ### 5. Basic Interactions Review
 
 Small toy project to review the basic interactions.
+
+### 6. Easy Filtering and Ordering
+
+Demo of using built in ordering and filtering functionality.
