@@ -34,3 +34,9 @@ Create local and global custom filters for use in applications.
 ### 8. Laravel and Vue
 
 Integrate Vue.js with Laravel framework and use AJAX requests on an API.
+
+
+### 9. Workflow with Browserify and Elixir
+
+Figure out a basic structure and workflow for using Browserify with Vue.
+Make use of Elixir browserify in Laravel.
