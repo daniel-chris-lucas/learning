@@ -44,3 +44,7 @@ Make use of Elixir browserify in Laravel.
 ### 10. Components
 
 Create reusable pieces of functionality with Components.
+
+### 11. Props
+
+Pass data from a parent to a child component with Props.
