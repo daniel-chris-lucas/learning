@@ -40,3 +40,7 @@ Integrate Vue.js with Laravel framework and use AJAX requests on an API.
 
 Figure out a basic structure and workflow for using Browserify with Vue.
 Make use of Elixir browserify in Laravel.
+
+### 10. Components
+
+Create reusable pieces of functionality with Components.
