@@ -58,3 +58,7 @@ coupon is valid. (browserify, Laravel, components, filters, props)
 ### 13. Custom directives
 
 Extend Vue.js with custom directives
+
+### 14. Custom Components using Vueify
+
+Build bundled components using Browserify and Vueify
