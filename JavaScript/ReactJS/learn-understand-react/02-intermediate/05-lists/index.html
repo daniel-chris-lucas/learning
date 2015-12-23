@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+
+    <script type="text/jsx">
+      // Define a `class`
+      var Badge = React.createClass({
+        render: function() {
+          return <button className="btn btn-primary" type="button">
+            {this.props.title} <span className="badge">{this.props.number}</span>
+          </button>
+        }
+      });
+
+      var Thumbnail = React.createClass({
+        render: function() {
+          return <div className="col-sm-6 col-md-4">
+            <div className="thumbnail">
+              <img src={this.props.imageUrl} />
+              <div className="caption">
+                <h3>{this.props.header}</h3>
+                <p>{this.props.description}</p>
+                <p>
+                  <Badge title={this.props.title} number={this.props.number} />
+                </p>
+              </div>
+            </div>
+          </div>
+        }
+      });
+
+      var ThumbnailList = React.createClass({
+        render: function() {
+          var list = this.props.thumbnailData.map(function(thumbnailProps) {
+            return <Thumbnail {...thumbnailProps} />
+          });
+
+          return <div>
+            {list}
+          </div>
+        }
+      });
+
+      var options = {
+        thumbnailData: [
+          {
+            title: 'See Courses',
+            number: 32,
+            header: 'Learn React',
+            description: 'React is a fantastic new library for making fast, dynamic pages. React is a fantastic new library for making fast, dynamic pages.',
+            imageUrl: 'http://formatjs.io/img/react.svg'
+          },
+          {
+            title: 'See Courses',
+            number: 25,
+            header: 'Learn Gulp',
+            description: 'Gulp will speed up your development workflow. Gulp will speed up your development workflow.',
+            imageUrl: 'http://brunch.io/images/others/gulp.png'
+          }
+        ]
+      };
+
+      // React, please render this class
+      var element = React.createElement(ThumbnailList, options);
+
+      // React, after you render this class, please place it in my body tag
+      React.render(element, document.querySelector('.row'));
+    </script>
+  </body>
+</html>
