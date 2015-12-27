@@ -5,6 +5,7 @@ Build an Imgur client.
 ### Contents
 
 1. Implementing fetch
+2. Create TopicList component
 
 ## Additional info
 
