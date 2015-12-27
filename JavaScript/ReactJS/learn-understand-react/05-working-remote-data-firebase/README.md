@@ -15,6 +15,7 @@ Build a Todo application using Firebase for storing data.
 9. Save done state to firebase.
 10. Added delete functionality and added save button.
 11. Save task edits to firebase.
+12. Add clear completed button
 
 ## Additional info
 
