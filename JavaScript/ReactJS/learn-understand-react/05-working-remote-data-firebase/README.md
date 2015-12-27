@@ -12,7 +12,7 @@ Build a Todo application using Firebase for storing data.
 6. Display list of items stored on firebase.
 7. Add a loaded state to only display list when firebase has loaded.
 8. Create ListItem module to display each task with checkbox, input field and delete button.
-9. Start saving done state to firebase
+9. Save done state to firebase
 
 ## Additional info
 
