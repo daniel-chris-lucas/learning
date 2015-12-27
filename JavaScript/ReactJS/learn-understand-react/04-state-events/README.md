@@ -1,11 +1,11 @@
 ## Section 3 : State & Events
 
-This section uses browserify and gulp to setup build script with a
-modularized architecture.
+Build a dropdown component with props and state to display currently selected item.
 
 ### Contents
 
-1. Split code into multiple component files
-2. First attempt at building using gulp, gulp-react & gulp-concat
-3. Gulp script using browserify
-4. Add import statements and modules to code=
+1. Use button component to display starting point for dropdown.
+2. Add events to button to detect click event.
+3. Add item list with a new ListItem Component for each item.
+4. Add state to the list to change it's visibility when clicking on the dropdown.
+5. Change title of the dropdown and highlight selected item.
