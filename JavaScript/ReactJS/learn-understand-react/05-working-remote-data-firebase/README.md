@@ -14,6 +14,7 @@ Build a Todo application using Firebase for storing data.
 8. Create ListItem module to display each task with checkbox, input field and delete button.
 9. Save done state to firebase.
 10. Added delete functionality and added save button.
+11. Save task edits to firebase.
 
 ## Additional info
 
