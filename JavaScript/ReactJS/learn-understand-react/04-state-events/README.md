@@ -1,4 +1,4 @@
-## Section 3 : State & Events
+## Section 4 : State & Events
 
 Build a dropdown component with props and state to display currently selected item.
 
