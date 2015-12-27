@@ -9,6 +9,7 @@ Build a Todo application using Firebase for storing data.
 3. Bootstrap master template and create Header component with search bar.
 4. Add event listener on text input to update text state.
 5. Push text input content to firebase and empty content.
+6. Display list of items stored on firebase.
 
 ## Additional info
 
