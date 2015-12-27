@@ -5,6 +5,7 @@ Build an Imgur client.
 ### Contents
 
 1. Add starter project and install modules. Setup React router.
+2. Refactoring: Move routes to specialized routing file.
 
 ## Additional info
 
