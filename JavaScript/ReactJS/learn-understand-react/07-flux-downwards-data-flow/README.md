@@ -6,6 +6,7 @@ Build an Imgur client.
 
 1. Implementing fetch
 2. Create TopicList component
+3. Fetching data naively
 
 ## Additional info
 
@@ -18,3 +19,4 @@ Build an Imgur client.
 - react-router@1.0.3
 - history
 - whatwg-fetch
+- reflux
