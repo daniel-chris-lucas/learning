@@ -7,6 +7,7 @@ Build an Imgur client.
 1. Implementing fetch
 2. Create TopicList component
 3. Fetching data naively
+4. Create TopicStore to remove API calls from component
 
 ## Additional info
 
