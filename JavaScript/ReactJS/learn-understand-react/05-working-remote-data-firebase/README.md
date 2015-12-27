@@ -6,6 +6,7 @@ Build a Todo application using Firebase for storing data.
 
 1. Building application architecture. Add starter project and install modules.
 2. Hook application up to remote firebase datastore.
+3. Bootstrap master template and create Header component with search bar.
 
 ## Additional info
 
