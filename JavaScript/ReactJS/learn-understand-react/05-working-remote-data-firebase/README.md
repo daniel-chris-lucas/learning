@@ -11,6 +11,7 @@ Build a Todo application using Firebase for storing data.
 5. Push text input content to firebase and empty content.
 6. Display list of items stored on firebase.
 7. Add a loaded state to only display list when firebase has loaded.
+8. Create ListItem module to display each task with checkbox, input field and delete button.
 
 ## Additional info
 
