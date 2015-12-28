@@ -12,6 +12,7 @@ Build an Imgur client.
 6. Add actions to interact with stores
 7. Improve topic list and add link to topic view
 8. Add wildcard parameters in the router for showing topics
+9. Render topics in the header
 
 ## Additional info
 
