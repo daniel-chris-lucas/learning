@@ -8,6 +8,9 @@ Build an Imgur client.
 2. Scaffolding image previews
 3. Filtering image data
 4. Playing videos on mouseover
+5. Showing a play button for each image
+6. Adding image stats overlay
+7. Scaffolding image detail
 
 ## Additional info
 
