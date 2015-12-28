@@ -11,6 +11,8 @@ Build an Imgur client.
 5. Showing a play button for each image
 6. Adding image stats overlay
 7. Scaffolding image detail
+8. Fetching single records from a store
+9. Rendering an image detail
 
 ## Additional info
 
