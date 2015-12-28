@@ -14,6 +14,7 @@ Build an Imgur client.
 8. Add wildcard parameters in the router for showing topics
 9. Render topics in the header
 10. Use react router helpers to show active menu item
+11. Implement image store
 
 ## Additional info
 
