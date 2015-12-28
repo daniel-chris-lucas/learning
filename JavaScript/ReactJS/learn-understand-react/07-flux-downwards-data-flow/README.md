@@ -10,6 +10,7 @@ Build an Imgur client.
 4. Create TopicStore to remove API calls from component
 5. Remove promise from topic list component and trigger changes from store (Pub/sub)
 6. Add actions to interact with stores
+7. Improve topic list and add link to topic view
 
 ## Additional info
 
