@@ -14,6 +14,7 @@ Build an Imgur client.
 8. Fetching single records from a store
 9. Rendering an image detail
 10. Actions on multiple methods
+11. Listening to many changes in a component
 
 ## Additional info
 
