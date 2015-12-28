@@ -5,6 +5,7 @@ Build an Imgur client.
 ### Contents
 
 1. Refetching data on rerender
+2. Scaffolding image previews
 
 ## Additional info
 
