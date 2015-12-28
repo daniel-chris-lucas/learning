@@ -6,6 +6,7 @@ Build an Imgur client.
 
 1. Refetching data on rerender
 2. Scaffolding image previews
+3. Filtering image data
 
 ## Additional info
 
@@ -19,3 +20,4 @@ Build an Imgur client.
 - history
 - whatwg-fetch
 - reflux
+- lodash
