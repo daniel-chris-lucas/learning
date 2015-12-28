@@ -13,6 +13,7 @@ Build an Imgur client.
 7. Scaffolding image detail
 8. Fetching single records from a store
 9. Rendering an image detail
+10. Actions on multiple methods
 
 ## Additional info
 
