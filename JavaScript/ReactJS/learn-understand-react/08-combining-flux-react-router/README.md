@@ -15,6 +15,7 @@ Build an Imgur client.
 9. Rendering an image detail
 10. Actions on multiple methods
 11. Listening to many changes in a component
+12. CSS animations
 
 ## Additional info
 
