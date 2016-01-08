@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Timestampable abstract class to define created behavior.
  *
  * @package Blog\ModelBundle\Entity
- * @ORM|MappedSuperclass
+ * @ORM\MappedSuperclass
  */
 abstract class Timestampable
 {
