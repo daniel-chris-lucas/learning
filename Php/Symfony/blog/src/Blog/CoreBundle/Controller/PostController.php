@@ -12,8 +12,10 @@ class PostController extends Controller
      */
     public function indexAction()
     {
+        $posts = $this->getDoctrine()->getRepository('ModelBundle:Post')->findAll();
+
         return $this->render('CoreBundle:Post:index.html.twig', array(
-            // ...
+            'posts' => $posts
         ));
     }
 
