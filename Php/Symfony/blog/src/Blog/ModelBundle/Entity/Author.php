@@ -2,6 +2,7 @@
 
 namespace Blog\ModelBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -11,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="author")
  * @ORM\Entity(repositoryClass="Blog\ModelBundle\Repository\AuthorRepository")
  */
-class Author
+class Author extends Timestampable
 {
     /**
      * @var int
@@ -31,20 +32,12 @@ class Author
     private $name;
 
     /**
-     * @var \DateTime
+     * @var ArrayCollection
      *
-     * @ORM\Column(name="createdAt", type="datetime")
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="author", cascade={"remove"})
      */
-    private $createdAt;
+    private $posts;
 
-
-    /**
-     * Author constructor.
-     */
-    public function __construct()
-    {
-        $this->createdAt = new \DateTime();
-    }
 
     /**
      * Get id
@@ -78,29 +71,5 @@ class Author
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set createdAt
-     *
-     * @param \DateTime $createdAt
-     *
-     * @return Author
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Get createdAt
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
     }
 }
