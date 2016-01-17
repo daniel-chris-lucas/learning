@@ -104,4 +104,28 @@ class Post extends Timestampable
     {
         return $this->body;
     }
+
+    /**
+     * Set author
+     *
+     * @param Author $author
+     *
+     * @return Post
+     */
+    public function setAuthor(Author $author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return Author
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
 }

@@ -21,7 +21,7 @@ abstract class Timestampable
 
 
     /**
-     * Author constructor.
+     * Constructor.
      */
     public function __construct()
     {
