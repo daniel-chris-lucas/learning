@@ -1,4 +1,4 @@
-# ng-book 2: Simple Reddit-like App
+# ng-book 2: Simple Reddit Clone
 
 > A simple voting app that resembles a minimal-reddit link voting app in Angular 2.
 
@@ -14,10 +14,10 @@ First, you need to make sure you install the dependencies:
 npm install
 ```
 
-Then we will 
+Then we will
 
 - compile our TypeScript code and
-- host the app on local development server 
+- host the app on local development server
 
 by running the command:
 
@@ -26,12 +26,6 @@ npm run go
 ```
 
 Then visit [http://localhost:8080](http://localhost:8080) in your browser. You should see an application with the header `Angular 2 Simple Reddit`. 
-
-## Getting Help
-
-In the case where it doesn't work, the first thing to try is looking at the developer console in your browser.
-
-If that doesn't work, [come chat with us](https://gitter.im/ng-book/ng-book)!
 
 ## Other Files (advanced)
 
