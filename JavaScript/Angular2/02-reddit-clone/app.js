@@ -9,7 +9,7 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var browser_1, core_1;
-    var HelloWorld;
+    var RedditApp;
     return {
         setters:[
             function (browser_1_1) {
@@ -19,20 +19,19 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                 core_1 = core_1_1;
             }],
         execute: function() {
-            HelloWorld = (function () {
-                function HelloWorld() {
-                    this.names = ['Daniel', 'Bob', 'Joe', 'Alan'];
+            RedditApp = (function () {
+                function RedditApp() {
                 }
-                HelloWorld = __decorate([
+                RedditApp = __decorate([
                     core_1.Component({
-                        selector: 'hello-world',
-                        template: "\n  <ul>\n    <li *ngFor=\"#name of names\">Hello {{ name }}</li>\n  </ul>\n  "
+                        selector: 'reddit',
+                        template: "\n    <form class=\"ui large form segment\">\n      <h3 class=\"ui header\">Add a Link</h3>\n\n      <div class=\"field\">\n        <label for=\"title\">Title:</label>\n        <input name=\"title\">\n      </div>\n      <div class=\"field\">\n        <label for=\"link\">Link:</label>\n        <input name=\"link\">\n      </div>\n    </form>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], HelloWorld);
-                return HelloWorld;
+                ], RedditApp);
+                return RedditApp;
             })();
-            browser_1.bootstrap(HelloWorld);
+            browser_1.bootstrap(RedditApp);
         }
     }
 });
