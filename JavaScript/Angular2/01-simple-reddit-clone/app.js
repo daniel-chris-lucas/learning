@@ -21,12 +21,12 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
         execute: function() {
             HelloWorld = (function () {
                 function HelloWorld() {
-                    this.name = 'Daniel';
+                    this.names = ['Daniel', 'Bob', 'Joe', 'Alan'];
                 }
                 HelloWorld = __decorate([
                     core_1.Component({
                         selector: 'hello-world',
-                        template: "<div>Hello {{ name }}</div>"
+                        template: "\n  <ul>\n    <li *ngFor=\"#name of names\">Hello {{ name }}</li>\n  </ul>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HelloWorld);

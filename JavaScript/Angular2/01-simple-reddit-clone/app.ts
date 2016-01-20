@@ -3,14 +3,18 @@ import { Component } from "angular2/core";
 
 @Component({
   selector: 'hello-world',
-  template: `<div>Hello {{ name }}</div>`
+  template: `
+  <ul>
+    <li *ngFor="#name of names">Hello {{ name }}</li>
+  </ul>
+  `
 })
 
 class HelloWorld {
-  name: string;
+  name: string[];
 
   constructor() {
-    this.name = 'Daniel';
+    this.names = ['Daniel', 'Bob', 'Joe', 'Alan'];
   }
 }
 
