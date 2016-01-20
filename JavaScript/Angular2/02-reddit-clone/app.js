@@ -22,10 +22,13 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
             RedditApp = (function () {
                 function RedditApp() {
                 }
+                RedditApp.prototype.addArticle = function (title, link) {
+                    console.log("Adding article title: " + title.value + " and link: " + link.value);
+                };
                 RedditApp = __decorate([
                     core_1.Component({
                         selector: 'reddit',
-                        template: "\n    <form class=\"ui large form segment\">\n      <h3 class=\"ui header\">Add a Link</h3>\n\n      <div class=\"field\">\n        <label for=\"title\">Title:</label>\n        <input name=\"title\">\n      </div>\n      <div class=\"field\">\n        <label for=\"link\">Link:</label>\n        <input name=\"link\">\n      </div>\n    </form>\n  "
+                        template: "\n    <form class=\"ui large form segment\">\n      <h3 class=\"ui header\">Add a Link</h3>\n\n      <div class=\"field\">\n        <label for=\"title\">Title:</label>\n        <input name=\"title\" #newtitle>\n      </div>\n      <div class=\"field\">\n        <label for=\"link\">Link:</label>\n        <input name=\"link\" #newlink>\n      </div>\n\n      <button (click)=\"addArticle(newtitle, newlink)\"\n              class=\"ui positive right floated button\">\n        Submit link\n      </button>\n    </form>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RedditApp);
