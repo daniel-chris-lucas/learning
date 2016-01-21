@@ -25,6 +25,15 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                     this.link = link;
                     this.votes = votes || 0;
                 }
+                Article.prototype.domain = function () {
+                    try {
+                        var link = this.link.split('//')[1];
+                        return link.split('/')[0];
+                    }
+                    catch (err) {
+                        return null;
+                    }
+                };
                 Article.prototype.voteUp = function () {
                     this.votes += 1;
                 };
@@ -51,7 +60,7 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                         host: {
                             class: 'row'
                         },
-                        template: "\n    <div class=\"four wide column center aligned votes\">\n      <div class=\"ui statistic\">\n        <div class=\"value\">\n          {{ article.votes }}\n        </div>\n        <div class=\"label\">\n          Points\n        </div>\n      </div>\n    </div>\n    <div class=\"twelve wide column\">\n      <a class=\"ui large header\" href=\"{{ article.link }}\">\n        {{ article.title }}\n      </a>\n      <ul class=\"ui big horizontal list voters\">\n        <li class=\"item\">\n          <a href (click)=\"voteUp()\">\n            <i class=\"arrow up icon\"></i>\n            upvote\n          </a>\n        </li>\n        <li class=\"item\">\n          <a href (click)=\"voteDown()\">\n            <i class=\"arrow down icon\"></i>\n            downvote\n          </a>\n        </li>\n      </ul>\n    </div>\n  "
+                        template: "\n    <div class=\"four wide column center aligned votes\">\n      <div class=\"ui statistic\">\n        <div class=\"value\">\n          {{ article.votes }}\n        </div>\n        <div class=\"label\">\n          Points\n        </div>\n      </div>\n    </div>\n    <div class=\"twelve wide column\">\n      <a class=\"ui large header\" href=\"{{ article.link }}\">\n        {{ article.title }}\n      </a>\n      <div class=\"meta\">({{ article.domain() }})</div>\n      <ul class=\"ui big horizontal list voters\">\n        <li class=\"item\">\n          <a href (click)=\"voteUp()\">\n            <i class=\"arrow up icon\"></i>\n            upvote\n          </a>\n        </li>\n        <li class=\"item\">\n          <a href (click)=\"voteDown()\">\n            <i class=\"arrow down icon\"></i>\n            downvote\n          </a>\n        </li>\n      </ul>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], ArticleComponent);
