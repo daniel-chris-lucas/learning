@@ -25,12 +25,6 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                     this.link = link;
                     this.votes = votes || 0;
                 }
-                Article.prototype.voteUp = function () {
-                    this.votes += 1;
-                };
-                Article.prototype.voteDown = function () {
-                    this.votes -= 1;
-                };
                 return Article;
             })();
             ArticleComponent = (function () {
