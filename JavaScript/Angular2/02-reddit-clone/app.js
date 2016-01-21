@@ -29,16 +29,14 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
             })();
             ArticleComponent = (function () {
                 function ArticleComponent() {
-                    this.title = 'Angular 2';
-                    this.link = 'http://angular.io';
-                    this.votes = 10;
+                    this.article = new Article('Angular 2', 'http://angular.io', 10);
                 }
                 ArticleComponent.prototype.voteUp = function () {
-                    this.votes += 1;
+                    this.article.votes += 1;
                     return false;
                 };
                 ArticleComponent.prototype.voteDown = function () {
-                    this.votes -= 1;
+                    this.article.votes -= 1;
                     return false;
                 };
                 ArticleComponent = __decorate([
@@ -47,7 +45,7 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                         host: {
                             class: 'row'
                         },
-                        template: "\n    <div class=\"four wide column center aligned votes\">\n      <div class=\"ui statistic\">\n        <div class=\"value\">\n          {{ votes }}\n        </div>\n        <div class=\"label\">\n          Points\n        </div>\n      </div>\n    </div>\n    <div class=\"twelve wide column\">\n      <a class=\"ui large header\" href=\"{{ link }}\">\n        {{ title }}\n      </a>\n      <ul class=\"ui big horizontal list voters\">\n        <li class=\"item\">\n          <a href (click)=\"voteUp()\">\n            <i class=\"arrow up icon\"></i>\n            upvote\n          </a>\n        </li>\n        <li class=\"item\">\n          <a href (click)=\"voteDown()\">\n            <i class=\"arrow down icon\"></i>\n            downvote\n          </a>\n        </li>\n      </ul>\n    </div>\n  "
+                        template: "\n    <div class=\"four wide column center aligned votes\">\n      <div class=\"ui statistic\">\n        <div class=\"value\">\n          {{ article.votes }}\n        </div>\n        <div class=\"label\">\n          Points\n        </div>\n      </div>\n    </div>\n    <div class=\"twelve wide column\">\n      <a class=\"ui large header\" href=\"{{ article.link }}\">\n        {{ article.title }}\n      </a>\n      <ul class=\"ui big horizontal list voters\">\n        <li class=\"item\">\n          <a href (click)=\"voteUp()\">\n            <i class=\"arrow up icon\"></i>\n            upvote\n          </a>\n        </li>\n        <li class=\"item\">\n          <a href (click)=\"voteDown()\">\n            <i class=\"arrow down icon\"></i>\n            downvote\n          </a>\n        </li>\n      </ul>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], ArticleComponent);
