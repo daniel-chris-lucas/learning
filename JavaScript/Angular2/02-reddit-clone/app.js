@@ -67,6 +67,9 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                 }
                 RedditApp.prototype.addArticle = function (title, link) {
                     console.log("Adding article title: " + title.value + " and link: " + link.value);
+                    this.articles.push(new Article(title.value, link.value, 0));
+                    title.value = '';
+                    link.value = '';
                 };
                 RedditApp = __decorate([
                     core_1.Component({
