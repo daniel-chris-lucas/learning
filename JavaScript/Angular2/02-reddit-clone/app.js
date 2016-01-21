@@ -80,11 +80,14 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                     title.value = '';
                     link.value = '';
                 };
+                RedditApp.prototype.sortedArticles = function () {
+                    return this.articles.sort(function (a, b) { return b.votes - a.votes; });
+                };
                 RedditApp = __decorate([
                     core_1.Component({
                         selector: 'reddit',
                         directives: [ArticleComponent],
-                        template: "\n    <form class=\"ui large form segment\">\n      <h3 class=\"ui header\">Add a Link</h3>\n\n      <div class=\"field\">\n        <label for=\"title\">Title:</label>\n        <input name=\"title\" #newtitle>\n      </div>\n      <div class=\"field\">\n        <label for=\"link\">Link:</label>\n        <input name=\"link\" #newlink>\n      </div>\n\n      <button (click)=\"addArticle(newtitle, newlink)\"\n              class=\"ui positive right floated button\">\n        Submit link\n      </button>\n    </form>\n\n    <div class=\"ui grid posts\">\n      <reddit-article\n        *ngFor=\"#article of articles\"\n        [article]=\"article\">\n      </reddit-article>\n    </div>\n  "
+                        template: "\n    <form class=\"ui large form segment\">\n      <h3 class=\"ui header\">Add a Link</h3>\n\n      <div class=\"field\">\n        <label for=\"title\">Title:</label>\n        <input name=\"title\" #newtitle>\n      </div>\n      <div class=\"field\">\n        <label for=\"link\">Link:</label>\n        <input name=\"link\" #newlink>\n      </div>\n\n      <button (click)=\"addArticle(newtitle, newlink)\"\n              class=\"ui positive right floated button\">\n        Submit link\n      </button>\n    </form>\n\n    <div class=\"ui grid posts\">\n      <reddit-article\n        *ngFor=\"#article of sortedArticles()\"\n        [article]=\"article\">\n      </reddit-article>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RedditApp);
