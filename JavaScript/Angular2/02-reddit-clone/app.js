@@ -25,6 +25,12 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                     this.link = link;
                     this.votes = votes || 0;
                 }
+                Article.prototype.voteUp = function () {
+                    this.votes += 1;
+                };
+                Article.prototype.voteDown = function () {
+                    this.votes -= 1;
+                };
                 return Article;
             })();
             ArticleComponent = (function () {
@@ -32,11 +38,11 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                     this.article = new Article('Angular 2', 'http://angular.io', 10);
                 }
                 ArticleComponent.prototype.voteUp = function () {
-                    this.article.votes += 1;
+                    this.article.voteUp();
                     return false;
                 };
                 ArticleComponent.prototype.voteDown = function () {
-                    this.article.votes -= 1;
+                    this.article.voteDown();
                     return false;
                 };
                 ArticleComponent = __decorate([
