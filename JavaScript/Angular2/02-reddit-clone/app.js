@@ -9,7 +9,7 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var browser_1, core_1;
-    var ArticleComponent, RedditApp;
+    var Article, ArticleComponent, RedditApp;
     return {
         setters:[
             function (browser_1_1) {
@@ -19,6 +19,20 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                 core_1 = core_1_1;
             }],
         execute: function() {
+            Article = (function () {
+                function Article(title, link, votes) {
+                    this.title = title;
+                    this.link = link;
+                    this.votes = votes || 0;
+                }
+                Article.prototype.voteUp = function () {
+                    this.votes += 1;
+                };
+                Article.prototype.voteDown = function () {
+                    this.votes -= 1;
+                };
+                return Article;
+            })();
             ArticleComponent = (function () {
                 function ArticleComponent() {
                     this.title = 'Angular 2';
