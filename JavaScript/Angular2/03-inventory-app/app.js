@@ -1,5 +1,4 @@
 System.register(['angular2/core', 'angular2/platform/browser'], function(exports_1) {
-    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +28,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     this.price = price;
                 }
                 return Product;
-            }());
+            })();
             /**
              * @ProductImage
              */
@@ -46,7 +45,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], ProductImage);
                 return ProductImage;
-            }());
+            })();
             /**
              * @PriceDisplay: A component to show the price of a Product
              */
@@ -62,7 +61,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], PriceDisplay);
                 return PriceDisplay;
-            }());
+            })();
             /**
              * @ProductDepartment: A component to show the breadcrumbs to a
              * Product's department
@@ -79,7 +78,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], ProductDepartment);
                 return ProductDepartment;
-            }());
+            })();
             /**
              * @ProductRow: A component for the view of a single Product
              */
@@ -97,7 +96,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], ProductRow);
                 return ProductRow;
-            }());
+            })();
             /**
              * @ProductsList: A component for rendering all ProductRows and
              * storing the currently selected Product
@@ -127,7 +126,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], ProductsList);
                 return ProductsList;
-            }());
+            })();
             InventoryApp = (function () {
                 function InventoryApp() {
                     this.products = [
@@ -148,7 +147,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], InventoryApp);
                 return InventoryApp;
-            }());
+            })();
             browser_1.bootstrap(InventoryApp);
         }
     }
