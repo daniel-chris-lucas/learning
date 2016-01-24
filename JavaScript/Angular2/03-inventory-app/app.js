@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, browser_1;
-    var Product, ProductsList, InventoryApp;
+    var Product, ProductRow, ProductsList, InventoryApp;
     return {
         setters:[
             function (core_1_1) {
@@ -29,6 +29,24 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     this.price = price;
                 }
                 return Product;
+            }());
+            /**
+             * @ProductRow: A component for the view of a single Product
+             */
+            ProductRow = (function () {
+                function ProductRow() {
+                }
+                ProductRow = __decorate([
+                    core_1.Component({
+                        selector: 'product-row',
+                        inputs: ['product'],
+                        host: { 'class': 'item' },
+                        directives: [ProductImage, ProductDepartment, PriceDisplay],
+                        template: "\n    <product-image [product]=\"product\"></product-image>\n    <div class=\"content\">\n      <div class=\"header\">{{ product.name }}</div>\n      <div class=\"meta\">\n        <div class=\"product-sku\">SKU #{{ product.sku }}</div>\n      </div>\n      <div class=\"description\">\n        <product-department [product]=\"product\"></product-department>\n      </div>\n    </div>\n    <price-display [price]=\"product.price\"></price-display>\n   "
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], ProductRow);
+                return ProductRow;
             }());
             /**
              * @ProductsList: A component for rendering all ProductRows and
