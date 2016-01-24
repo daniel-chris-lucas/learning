@@ -29,6 +29,21 @@ class ProductImage {
 }
 
 /**
+ * @PriceDisplay: A component to show the price of a Product
+ */
+@Component({
+  selector: 'price-display',
+  inputs: ['price'],
+  template: `
+    <div class="price-display">\${{ price }}</div>
+  `
+})
+
+class PriceDisplay {
+  price: number;
+}
+
+/**
  * @ProductRow: A component for the view of a single Product
  */
 @Component({

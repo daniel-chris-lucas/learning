@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, browser_1;
-    var Product, ProductImage, ProductRow, ProductsList, InventoryApp;
+    var Product, ProductImage, PriceDisplay, ProductRow, ProductsList, InventoryApp;
     return {
         setters:[
             function (core_1_1) {
@@ -46,6 +46,22 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], ProductImage);
                 return ProductImage;
+            }());
+            /**
+             * @PriceDisplay: A component to show the price of a Product
+             */
+            PriceDisplay = (function () {
+                function PriceDisplay() {
+                }
+                PriceDisplay = __decorate([
+                    core_1.Component({
+                        selector: 'price-display',
+                        inputs: ['price'],
+                        template: "\n    <div class=\"price-display\">${{ price }}</div>\n  "
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], PriceDisplay);
+                return PriceDisplay;
             }());
             /**
              * @ProductRow: A component for the view of a single Product
