@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, browser_1;
-    var Product, ProductImage, PriceDisplay, ProductRow, ProductsList, InventoryApp;
+    var Product, ProductImage, PriceDisplay, ProductDepartment, ProductRow, ProductsList, InventoryApp;
     return {
         setters:[
             function (core_1_1) {
@@ -62,6 +62,23 @@ System.register(['angular2/core', 'angular2/platform/browser'], function(exports
                     __metadata('design:paramtypes', [])
                 ], PriceDisplay);
                 return PriceDisplay;
+            }());
+            /**
+             * @ProductDepartment: A component to show the breadcrumbs to a
+             * Product's department
+             */
+            ProductDepartment = (function () {
+                function ProductDepartment() {
+                }
+                ProductDepartment = __decorate([
+                    core_1.Component({
+                        selector: 'product-department',
+                        inputs: ['product'],
+                        template: "\n    <div class=\"product-department\">\n      <span *ngFor=\"#name of product.department; #i=index\">\n        <a href=\"#\">{{ name }}</a>\n        <span>{{ i < (product.department.length - 1) ? '>' : '' }}</span>\n      </span>\n    </div>\n  "
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], ProductDepartment);
+                return ProductDepartment;
             }());
             /**
              * @ProductRow: A component for the view of a single Product
