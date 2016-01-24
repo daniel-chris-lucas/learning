@@ -13,14 +13,30 @@ class Product {
 }
 
 /**
+ * @ProductImage
+ */
+@Component({
+  selector: 'product-image',
+  host: {class: 'ui small image'},
+  inputs: ['product'],
+  template: `
+    <img class="product-image" [src]="product.imageUrl">
+  `
+})
+
+class ProductImage {
+  product: Product;
+}
+
+/**
  * @ProductRow: A component for the view of a single Product
  */
- @Component({
-   selector: 'product-row',
-   inputs: ['product'],
-   host: {'class': 'item'},
-   directives: [ProductImage, ProductDepartment, PriceDisplay],
-   template: `
+@Component({
+  selector: 'product-row',
+  inputs: ['product'],
+  host: {'class': 'item'},
+  directives: [ProductImage, ProductDepartment, PriceDisplay],
+  template: `
     <product-image [product]="product"></product-image>
     <div class="content">
       <div class="header">{{ product.name }}</div>
@@ -32,7 +48,7 @@ class Product {
       </div>
     </div>
     <price-display [price]="product.price"></price-display>
-   `
+  `
  })
 
  class ProductRow {
