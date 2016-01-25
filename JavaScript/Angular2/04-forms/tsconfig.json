@@ -16,6 +16,7 @@
     ],
     "files": [
         "./app/ts/app.ts",
+        "./app/ts/forms/demo_form_sku_with_builder.ts",
         "./app/ts/forms/demo_form_sku.ts",
         "./vendor.ts"
     ],

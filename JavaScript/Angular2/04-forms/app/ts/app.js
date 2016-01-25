@@ -16,14 +16,15 @@ require('../images/ng-book-2-minibook.png');
 require('../images/favicon-32x32.png');
 require('../images/favicon.ico');
 var demo_form_sku_1 = require('./forms/demo_form_sku');
+var demo_form_sku_with_builder_1 = require('./forms/demo_form_sku_with_builder');
 var FormsDemoApp = (function () {
     function FormsDemoApp() {
     }
     FormsDemoApp = __decorate([
         core_1.Component({
             selector: 'forms-demo-app',
-            directives: [demo_form_sku_1.DemoFormSku],
-            template: "\n    <div>\n      <demo-form-sku></demo-form-sku>\n    </div>\n  "
+            directives: [demo_form_sku_1.DemoFormSku, demo_form_sku_with_builder_1.DemoFormSkuBuilder],
+            template: "\n    <div>\n      <demo-form-sku-builder></demo-form-sku-builder>\n      <demo-form-sku></demo-form-sku>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FormsDemoApp);

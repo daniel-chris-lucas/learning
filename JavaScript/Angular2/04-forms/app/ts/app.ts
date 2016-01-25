@@ -15,12 +15,14 @@ require('../images/favicon-32x32.png');
 require('../images/favicon.ico');
 
 import {DemoFormSku} from './forms/demo_form_sku';
+import {DemoFormSkuBuilder} from './forms/demo_form_sku_with_builder';
 
 @Component({
   selector: 'forms-demo-app',
-  directives: [DemoFormSku],
+  directives: [DemoFormSku, DemoFormSkuBuilder],
   template: `
     <div>
+      <demo-form-sku-builder></demo-form-sku-builder>
       <demo-form-sku></demo-form-sku>
     </div>
   `
