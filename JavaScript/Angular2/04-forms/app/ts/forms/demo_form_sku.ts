@@ -7,16 +7,10 @@ import { FORM_DIRECTIVES } from 'angular2/common';
   template: `
     <div class="ui raised segment">
       <h2 class="ui header">Demo Form: Sku</h2>
-      <form #f="ngForm"
-        (ngSubmit)="onSubmit(f.value)"
-        class="ui form">
-
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
         <div class="field">
-          <label="skuInput">SKU</label>
-          <input type="text"
-                 id="skuInput"
-                 placeholder="SKU"
-                 ngControl="sku">
+          <label for="skuInput">SKU</label>
+          <input type="text" id="skuInput" placeholder="SKU" ngControl="sku">
         </div>
 
         <button type="submit" class="ui button">Submit</button>

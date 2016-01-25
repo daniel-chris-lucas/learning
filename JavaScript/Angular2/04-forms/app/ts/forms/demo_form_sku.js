@@ -20,7 +20,7 @@ var DemoFormSku = (function () {
         core_1.Component({
             selector: 'demo-form-sku',
             directives: [common_1.FORM_DIRECTIVES],
-            template: "\n    <div class=\"ui raised segment\">\n      <h2 class=\"ui header\">Demo Form: Sku</h2>\n      <form #f=\"ngForm\"\n        (ngSubmit)=\"onSubmit(f.value)\"\n        class=\"ui form\">\n\n        <div class=\"field\">\n          <label=\"skuInput\">SKU</label>\n          <input type=\"text\"\n                 id=\"skuInput\"\n                 placeholder=\"SKU\"\n                 ngControl=\"sku\">\n        </div>\n\n        <button type=\"submit\" class=\"ui button\">Submit</button>\n      </form>\n    </div>\n  "
+            template: "\n    <div class=\"ui raised segment\">\n      <h2 class=\"ui header\">Demo Form: Sku</h2>\n      <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f.value)\" class=\"ui form\">\n        <div class=\"field\">\n          <label for=\"skuInput\">SKU</label>\n          <input type=\"text\" id=\"skuInput\" placeholder=\"SKU\" ngControl=\"sku\">\n        </div>\n\n        <button type=\"submit\" class=\"ui button\">Submit</button>\n      </form>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], DemoFormSku);

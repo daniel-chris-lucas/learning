@@ -13,3 +13,20 @@ require('../css/semantic.min.css');
 require('../images/ng-book-2-minibook.png');
 require('../images/favicon-32x32.png');
 require('../images/favicon.ico');
+
+import {DemoFormSku} from './forms/demo_form_sku';
+
+@Component({
+  selector: 'forms-demo-app',
+  directives: [DemoFormSku],
+  template: `
+    <div>
+      <demo-form-sku></demo-form-sku>
+    </div>
+  `
+})
+
+class FormsDemoApp {
+}
+
+bootstrap(FormsDemoApp);
