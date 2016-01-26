@@ -16,13 +16,22 @@ require('../images/favicon.ico');
 
 import {DemoFormSku} from './forms/demo_form_sku';
 import {DemoFormSkuBuilder} from './forms/demo_form_sku_with_builder';
-import {DemoFormWithValidationsExplicit} from './forms/demo_form_with_validations_explicit';
+import {DemoFormWithValidationsExplicit}
+  from './forms/demo_form_with_validations_explicit';
+import {DemoFormWithValidationsShorthand}
+  from './forms/demo_form_with_validations_shorthand';
 
 @Component({
   selector: 'forms-demo-app',
-  directives: [DemoFormSku, DemoFormSkuBuilder, DemoFormWithValidationsExplicit],
+  directives: [
+    DemoFormSku,
+    DemoFormSkuBuilder,
+    DemoFormWithValidationsExplicit,
+    DemoFormWithValidationsShorthand
+  ],
   template: `
     <div>
+      <demo-form-with-validations-shorthand></demo-form-with-validations-shorthand>
       <demo-form-with-validations-explicit></demo-form-with-validations-explicit>
       <demo-form-sku-builder></demo-form-sku-builder>
       <demo-form-sku></demo-form-sku>
