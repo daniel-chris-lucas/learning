@@ -11,6 +11,7 @@
   "files": [
     "./app/ts/ChatExampleData.ts",
     "./app/ts/models.ts",
+    "./app/ts/services/UserService.ts",
     "./app/ts/util/uuid.ts",
     "./test/app.spec.ts",
     "./test/calculator.ts",
