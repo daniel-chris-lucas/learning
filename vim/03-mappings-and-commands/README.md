@@ -12,6 +12,7 @@
 - [Shift]+V y p = Copy line then paste
 - yyp = Copy line then paste
 - . = Redo last command
+- gg = Return cursor to beginning
 
 ### Vimrc file:
 
