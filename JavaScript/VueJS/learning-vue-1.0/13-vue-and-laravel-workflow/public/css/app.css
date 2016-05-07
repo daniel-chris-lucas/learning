@@ -1,0 +1,22 @@
+.Alert {
+  position: relative;
+  background: #ddd;
+  border: 1px solid #c4c4c4;
+  padding: 1em; }
+
+.Alert--Success {
+  background: #e6ffe6;
+  border: 1px solid #1aff1a; }
+
+.Alert--Error {
+  background: white;
+  border: 1px solid #ff9999; }
+
+.Alert__close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-weight: bold;
+  cursor: pointer; }
+
+/*# sourceMappingURL=app.css.map */
