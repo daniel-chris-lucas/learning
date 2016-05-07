@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rendering and Working with Lists</title>
+
+  <style>
+    .completed { text-decoration: line-through; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <tasks :list="tasks"></tasks>
+  </div>
+
+  <template id="tasks-template">
+    <ul>
+      <li :class="{ 'completed': task.completed }"
+          v-for="task in list"
+          @click="task.completed = ! task.completed"
+      >
+        {{ task.body }}
+      </li>
+    </ul>
+  </template>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.8/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
