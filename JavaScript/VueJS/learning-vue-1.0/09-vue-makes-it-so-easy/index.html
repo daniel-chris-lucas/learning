@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Custom Components 101</title>
+  <title>Vue Makes it so Easy</title>
 
   <style>
     .completed { text-decoration: line-through; }
@@ -14,14 +14,25 @@
   </div>
 
   <template id="tasks-template">
-    <ul>
+    <h1>
+      My Tasks
+      <span v-show="remaining">({{ remaining }})</span>
+    </h1>
+
+    <ul v-show="list.length">
       <li :class="{ 'completed': task.completed }"
           v-for="task in list"
           @click="task.completed = ! task.completed"
       >
         {{ task.body }}
+
+        <strong @click="deleteTask(task)">x</strong>
       </li>
     </ul>
+
+    <p v-else>No tasks yet!</p>
+
+    <button @click="clearCompleted">Clear Completed</button>
   </template>
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.8/vue.js"></script>
