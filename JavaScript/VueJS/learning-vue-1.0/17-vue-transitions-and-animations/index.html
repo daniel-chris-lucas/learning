@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue Transitions and Animations</title>
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- Uses manually created transitions in main.css -->
+  <!-- <div v-show="show" transition="fade">Hello World</div> -->
+
+  <!-- Uses animate.css -->
+  <div v-show="show" class="animated" transition="anim-fade">Hello World</div>
+
+  <button @click="show = ! show">Toggle</button>
+
+  <script src="http://vuejs.org/js/vue.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
