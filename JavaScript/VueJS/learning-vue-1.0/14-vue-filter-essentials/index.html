@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Filter Essentials</title>
+</head>
+<body>
+  <h1>{{ 'hello world' | uppercase }}</h1>
+
+  <p>{{ 5 | currency }}</p>
+  <p>{{ 4 | currency '£' }}</p>
+  <pre>{{ $data | json }}</pre>
+  <pre>{{ $data | jsonIt}}</pre>
+
+  <ul>
+    <!-- <li v-for="person in people | orderBy 'name' -1 | limitBy 2">{{ person.name }}</li> -->
+    <li v-for="person in people | role 'admin'">{{ person.name }}</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.13/vue.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
