@@ -1,0 +1,9 @@
+.Plan__name {
+  width: 110px;
+  display: inline-block;
+}
+
+.Plan__price {
+  width: 100px;
+  display: inline-block;
+}
