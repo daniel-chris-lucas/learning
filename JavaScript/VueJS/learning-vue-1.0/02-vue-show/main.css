@@ -1,0 +1,14 @@
+.error {
+  color: red;
+  font-style: italic;
+  display: block;
+}
+
+textarea {
+  width: 450px;
+  height: 200px;
+}
+
+button {
+  display: block;
+}

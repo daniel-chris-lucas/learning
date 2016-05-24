@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitHelpers": false,
+    "sourceMap": true
+  },
+  "files": [
+    "./app/ts/ChatExampleData.ts",
+    "./app/ts/models.ts",
+    "./app/ts/services/UserService.ts",
+    "./app/ts/util/uuid.ts",
+    "./test/app.spec.ts",
+    "./test/calculator.ts",
+    "./test/services/MessagesService.spec.ts",
+    "./test/services/ThreadsService.spec.ts"
+  ],
+  "filesGlob": [
+    "./app/**/*.ts",
+    "./test/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}
