@@ -7,6 +7,10 @@
 #define MAX_DATA 512
 #define MAX_ROWS 100
 
+/**
+ * Address structure
+ * Contains people's id, name and email
+ */
 struct Address
 {
     int id;
@@ -15,17 +19,27 @@ struct Address
     char email[MAX_DATA];
 };
 
+/**
+ * Database structure
+ * A group of addresses
+ */
 struct Database
 {
     struct Address rows[MAX_ROWS];
 };
 
+/**
+ * Connection structure
+ */
 struct Connection
 {
     FILE *file;
     struct Database *db;
 };
 
+/**
+ * Kills the application when there are errors.
+ */
 void die(const char *message)
 {
     if (errno)
@@ -36,17 +50,27 @@ void die(const char *message)
     exit(1);
 }
 
+/**
+ * Displays the contents of the given address
+ */
 void Address_print(struct Address *addr)
 {
     printf("%d %s %s\n", addr->id, addr->name, addr->email);
 }
 
+/**
+ * Loads the contents of the db file into the Connection database
+ */
 void Database_load(struct Connection *conn)
 {
     int rc = fread(conn->db, sizeof(struct Database), 1, conn->file);
     if (rc != 1) die("Failed to load database.");
 }
 
+/**
+ * Creates the database on the given connection and tries to
+ * load fdb file
+ */
 struct Connection *Database_open(const char *filename, char mode)
 {
     struct Connection *conn = malloc(sizeof(struct Connection));
@@ -74,6 +98,9 @@ struct Connection *Database_open(const char *filename, char mode)
     return conn;
 }
 
+/**
+ * Closes the database file
+ */
 void Database_close(struct Connection *conn)
 {
     if (conn)
@@ -84,6 +111,9 @@ void Database_close(struct Connection *conn)
     }
 }
 
+/**
+ * Writes the contents of the connection into the database file
+ */
 void Database_write(struct Connection *conn)
 {
     rewind(conn->file);
@@ -95,6 +125,9 @@ void Database_write(struct Connection *conn)
     if (rc == -1) die("Cannot flush database.");
 }
 
+/**
+ * Creates a new record
+ */
 void Database_create(struct Connection *conn)
 {
     int i = 0;
@@ -108,6 +141,10 @@ void Database_create(struct Connection *conn)
     }
 }
 
+/**
+ * Modifies the person with the given ID.
+ * Sets new email and name values.
+ */
 void Database_set(struct Connection *conn, int id, const char *name, const char *email)
 {
     struct Address *addr = &conn->db->rows[id];
@@ -123,6 +160,9 @@ void Database_set(struct Connection *conn, int id, const char *name, const char 
     if (!res) die("Email copy failed");
 }
 
+/**
+ * Gets the gievn ID from the database
+ */
 void Database_get(struct Connection *conn, int id)
 {
     struct Address *addr = &conn->db->rows[id];
@@ -133,12 +173,19 @@ void Database_get(struct Connection *conn, int id)
         die("ID is not set");
 }
 
+/**
+ * Deletes the given id from the database
+ * Unsets the set variable
+ */
 void Database_delete(struct Connection *conn, int id)
 {
     struct Address addr = {.id = id, .set = 0};
     conn->db->rows[id] = addr;
 }
 
+/**
+ * Lists the contents of the database
+ */
 void Database_list(struct Connection *conn)
 {
     int i = 0;

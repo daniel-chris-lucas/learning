@@ -2,4 +2,4 @@
 
 ## Exercise 17 : Heap And Stack Memory Allocation
 
-Parse arrays with pointers
+Create a simple database system
