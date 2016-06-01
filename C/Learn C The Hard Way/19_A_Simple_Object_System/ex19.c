@@ -5,6 +5,9 @@
 #include <time.h>
 #include "ex19.h"
 
+/**
+ * Attack a monster. Inflicts the given amount of damage
+ */
 int Monster_attack(void *self, int damage)
 {
     Monster *monster = self;
@@ -22,6 +25,9 @@ int Monster_attack(void *self, int damage)
     }
 }
 
+/**
+ * Instantiate a new monster with 10 HP
+ */
 int Monster_init(void *self)
 {
     Monster *monster = self;
@@ -29,11 +35,17 @@ int Monster_init(void *self)
     return 1;
 }
 
+/**
+ * Monster Prototype
+ */
 Object MonsterProto = {
     .init = Monster_init,
     .attack = Monster_attack
 };
 
+/**
+ * Checks if the wanted room is available then moves the player if possible
+ */
 void *Room_move(void *self, Direction direction)
 {
     Room *room = self;
@@ -63,6 +75,10 @@ void *Room_move(void *self, Direction direction)
     return next;
 }
 
+/**
+ * Attack in the current room.
+ * If there is a monster will make a call to Monster_attack
+ */
 int Room_attack(void *self, int damage)
 {
     Room *room = self;
@@ -77,11 +93,18 @@ int Room_attack(void *self, int damage)
     }
 }
 
+/**
+ * Room Prototype
+ */
 Object RoomProto = {
     .move = Room_move,
     .attack = Room_attack
 };
 
+/**
+ * Move the player in the map
+ * Makes call to Room_move
+ */
 void *Map_move(void *self, Direction direction)
 {
     Map *map = self;
@@ -97,6 +120,10 @@ void *Map_move(void *self, Direction direction)
     return next;
 }
 
+/**
+ * Attack in the current location.
+ * Makes call to Room_attack
+ */
 int Map_attack(void *self, int damage)
 {
     Map *map = self;
@@ -105,6 +132,10 @@ int Map_attack(void *self, int damage)
     return location->_(attack)(location, damage);
 }
 
+/**
+ * Setup the game map.
+ * Creates rooms and places the monster
+ */
 int Map_init(void *self)
 {
     Map *map = self;
@@ -135,12 +166,18 @@ int Map_init(void *self)
     return 1;
 }
 
+/**
+ * Map Prototype
+ */
 Object MapProto = {
     .init = Map_init,
     .move = Map_move,
     .attack = Map_attack
 };
 
+/**
+ * Scan user input and make call to wanted function
+ */
 int process_input(Map *game)
 {
     printf("\n> ");
@@ -191,6 +228,9 @@ int process_input(Map *game)
     return 1;
 }
 
+/**
+ * Start the game and create loop for scanning and running the game
+ */
 int main(int argc, char *argv[])
 {
     // simple way to setup the randomness

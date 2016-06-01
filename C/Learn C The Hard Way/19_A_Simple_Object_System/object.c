@@ -4,6 +4,9 @@
 #include "object.h"
 #include <assert.h>
 
+/**
+ * Destroy the gievn object. Erase it from the memory
+ */
 void Object_destroy(void *self)
 {
     Object *obj = self;
@@ -16,30 +19,45 @@ void Object_destroy(void *self)
     }
 }
 
+/**
+ * Display description of the object
+ */
 void Object_describe(void *self)
 {
     Object *obj = self;
     printf("%s.\n", obj->description);
 }
 
+/**
+ * Initializes an abject. No need to do anything as the "real" object
+ * will have it's own initialization
+ */
 int Object_init(void *self)
 {
-    // do nothing really
     return 1;
 }
 
+/**
+ * Define the move function
+ */
 void *Object_move(void *self, Direction direction)
 {
     printf("Your can't go that direction.\n");
     return NULL;
 }
 
+/**
+ * Define attack function
+ */
 int Object_attack(void *self, int damage)
 {
     printf("You can't attack that.\n");
     return 0;
 }
 
+/**
+ * Instantiation of the object
+ */
 void *Object_new(size_t size, Object proto, char *description)
 {
     // setup the default function in case they aren't set

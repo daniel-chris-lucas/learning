@@ -2,4 +2,4 @@
 
 ## Exercise 19 : A Simple Object System
 
-Use function pointers to pass callbacks as function parameters
+Create a console based game using a simple object system
