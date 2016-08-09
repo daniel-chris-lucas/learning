@@ -16,3 +16,7 @@ Extra details on the render method of a component.
 ### 4. Introduction To Properties
 
 How to add properties (parameters) to components.
+
+### 5. State Basics
+
+Introduction to component state.
