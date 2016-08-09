@@ -17,7 +17,7 @@ npm install react react-dom --save
 Install babel dependencies for project :
 
 ```
-npm install babel loader babel-core babel-preset-es2015 babel-preset-react --save
+npm install webpack babel babel-loader babel-core babel-preset-es2015 babel-preset-react --save
 ```
 
 Configure webpack in webpack.config.js
