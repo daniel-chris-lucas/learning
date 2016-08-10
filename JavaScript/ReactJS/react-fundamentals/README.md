@@ -41,3 +41,7 @@ Build a button Component a pass content inside it.
 Run actions at different points in a component's lifecycle.
 
 Introduction to mounting and unmounting react components.
+
+### 10. Component Lifecycle - Mounting Usage
+
+Some simple uses for lifecycle hooks.

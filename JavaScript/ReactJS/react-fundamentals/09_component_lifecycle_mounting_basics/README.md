@@ -1,6 +1,5 @@
 ## Component Lifecycle - Mounting Basics
 
-When building React components, you'll probably want to access child
-properties of the markup.
+Run actions at different points in a component's lifecycle.
 
-Build a button Component a pass content inside it.
+Introduction to mounting and unmounting react components.
