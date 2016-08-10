@@ -8,7 +8,6 @@ Install packages needed for development, create basic webpack config and a hello
 
 Create a basic Hello World component.
 
-
 ### 3. The Render Method
 
 Extra details on the render method of a component.
@@ -29,3 +28,10 @@ Send data from a parent component to a child component.
 
 When using React components you need to be able to access specific
 references to individual components. This is done by defining a ref.
+
+### 8. Accessing Child Properties
+
+When building React components, you'll probably want to access child
+properties of the markup.
+
+Build a button Component a pass content inside it.
