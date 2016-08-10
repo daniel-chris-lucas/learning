@@ -20,3 +20,12 @@ How to add properties (parameters) to components.
 ### 5. State Basics
 
 Introduction to component state.
+
+### 6. Ownze Ownee Relationship
+
+Send data from a parent component to a child component.
+
+### 7. Using Refs to Access Components
+
+When using React components you need to be able to access specific
+references to individual components. This is done by defining a ref.
