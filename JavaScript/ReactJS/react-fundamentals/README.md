@@ -20,7 +20,7 @@ How to add properties (parameters) to components.
 
 Introduction to component state.
 
-### 6. Ownze Ownee Relationship
+### 6. Owner Ownee Relationship
 
 Send data from a parent component to a child component.
 
@@ -57,3 +57,8 @@ at runtime.
 
 Explore `componentWillReceiveProps`, `shouldComponentUpdate` &
 `componentDidUpdate`
+
+### 12. Higher Order Components
+
+Higher order components will allow you to applly behaviors to multiple React
+components. Mixins for React components.
