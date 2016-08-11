@@ -62,3 +62,9 @@ Explore `componentWillReceiveProps`, `shouldComponentUpdate` &
 
 Higher order components will allow you to applly behaviors to multiple React
 components. Mixins for React components.
+
+## 13. Composable Components
+
+To make more composable React components, define common APIs for similar component types.
+
+Create a NumInput component that can act as a number input field or range slider.
