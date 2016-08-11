@@ -13,8 +13,10 @@ class App extends React.Component {
     }
 
     /*
-     * Gets called when the component is ready
-     * Just before inserting into the DOM (render)
+     * Invoked once, both on the client and server, immediately before
+     * the intial rendering occurs. If you call setState within this method,
+     * render() will see the updated state and will be executed only once 
+     * despite the state change. 
      */
     componentWillMount() {
         this.setState({m: 2});
@@ -32,8 +34,14 @@ class App extends React.Component {
     }
 
     /*
-     * Gets called just after the component has been inserted into the DOM
-     * Just after first call to render
+     * Invoked once, immediately after the initial rendering occurs.
+     * At this point in the lifecycle, you can access any refs to your
+     * children. This componentDidMount() method of child components
+     * is invoked before that of parent components.
+     *
+     * If you want to integrate with other JavaScript frameworks, set
+     * timers using setTimeout or setInterval, or send AJAX requests,
+     * perform those operations in this method.
      */
     componentDidMount() {
         // console.log(ReactDOM.findDOMNode(this));
@@ -41,7 +49,11 @@ class App extends React.Component {
     }
 
     /*
-     * Called just before the component is removed from DOM
+     * Invoked immediately before a component is unmounted from the DOM.
+     *
+     * Perform any necessary cleanup in this method, such as validating
+     * timers or cleaning up any DOM elements that were created in
+     * componentDidMount.
      */
     componentWillUnmount() {
         clearInterval(this.inc);
@@ -54,10 +66,22 @@ class Wrapper extends React.Component {
     }
 
     mount() {
+        /**
+         * Render a ReactElement into the DOM in the supplied
+         * container and return a reference to the component.
+         *
+         * If the ReactElement was previously rendered into the
+         * container this will perform an update on it.
+         */
         ReactDOM.render(<App />, document.getElementById('a'));
     }
 
     unmount() {
+        /*
+         * Remove a mounted React component from the DOM and clean up its
+         * event handlers and state. If no component was mounted in the
+         * container, calling this function does nothing.
+         */
         ReactDOM.unmountComponentAtNode(document.getElementById('a'));
     }
 

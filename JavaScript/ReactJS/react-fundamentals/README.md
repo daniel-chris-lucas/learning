@@ -42,6 +42,18 @@ Run actions at different points in a component's lifecycle.
 
 Introduction to mounting and unmounting react components.
 
+Use of `ReactDOM.render`, `ReactDOM.unmountComponentAtNode`, `componentWillMount`, `componentDidMount` & `componentWillUnmount`
+
 ### 10. Component Lifecycle - Mounting Usage
 
 Some simple uses for lifecycle hooks.
+
+Use of `ReactDOM.render`, `ReactDOM.unmountComponentAtNode`, `componentWillMount`, `componentDidMount` & `componentWillUnmount`
+
+### 11. Component Lifecycle - Updating
+
+The react component lifecycle allows you to update your components
+at runtime.
+
+Explore `componentWillReceiveProps`, `shouldComponentUpdate` &
+`componentDidUpdate`
