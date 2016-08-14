@@ -68,3 +68,10 @@ components. Mixins for React components.
 To make more composable React components, define common APIs for similar component types.
 
 Create a NumInput component that can act as a number input field or range slider.
+
+### 14. Dynamically Generated Components
+
+React components can be dynamically generate based on a dataset.
+
+Create a table from a data set and use PersonRow component
+to display each row of information.
