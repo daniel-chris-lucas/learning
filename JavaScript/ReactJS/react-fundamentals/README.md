@@ -75,3 +75,9 @@ React components can be dynamically generate based on a dataset.
 
 Create a table from a data set and use PersonRow component
 to display each row of information.
+
+### 15. Build a JSX Live Compiler
+
+Create a tool to write JSX and see the output live in the browser.
+
+Use React to create a live JSX compiler.
