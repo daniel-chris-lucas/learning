@@ -10,6 +10,7 @@ const path    = require('path'),
 const getConfig = require('hjs-webpack');
 
 const isDev = NODE_ENV === 'development';
+const isTest = NODE_ENV === 'test';
 
 // alternatively, use process.argv[1]
 // const isDev = (process.argv[1] || '').indexOf(hjs-dev-server) !== -1
@@ -88,5 +89,26 @@ config.resolve.alias = {
     components: join(src, 'components'),
     utils: join(src, 'utils')
 };
+
+// Tests
+if (isTest) {
+    config.externals = {
+        'react/lib/ReactContext': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/addons': true
+    };
+
+    config.plugins = config.plugins.filter(p => {
+        const name = p.constructor.toString();
+        const fnName = name.match(/^function (.*)\((.*\))/);
+
+        const idx = [
+            'DedupePlugin',
+            'UglifyJsPlugin'
+        ].indexOf(fnName[1]);
+
+        return idx < 0;
+    });
+}
 
 module.exports = config;
