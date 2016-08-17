@@ -29,6 +29,7 @@ var CommentList = React.createClass({
             <div className="commentList">
                 <Comment author="Darth Vader">Luke, I am your father</Comment>
                 <Comment author="Yoda">The force is strong in this one</Comment>
+                <Comment author="Daniel Lucas">This is *another* comment</Comment>
             </div>
         );
     }
