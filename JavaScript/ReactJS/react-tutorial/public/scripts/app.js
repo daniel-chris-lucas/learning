@@ -1,3 +1,16 @@
+var Comment = React.createClass({
+    render: function () {
+        return (
+            <div className="comment">
+                <h2 className="commentAuthor">
+                    {this.props.author}
+                </h2>
+                {this.props.children}
+            </div>
+        );
+    }
+});
+
 var CommentBox = React.createClass({
     render: function () {
         return (
@@ -14,7 +27,8 @@ var CommentList = React.createClass({
     render: function () {
         return (
             <div className="commentList">
-                Hello, world. I am a CommentList.
+                <Comment author="Darth Vader">Luke, I am your father</Comment>
+                <Comment author="Yoda">The force is strong in this one</Comment>
             </div>
         );
     }
