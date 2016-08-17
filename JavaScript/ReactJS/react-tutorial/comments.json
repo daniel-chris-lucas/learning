@@ -13,5 +13,10 @@
         "id": 1471475174649,
         "author": "Darth Vader",
         "text": "Luke, I am your father"
+    },
+    {
+        "id": 1471475440378,
+        "author": "Yoda",
+        "text": "The _force is strong_ in this one!"
     }
 ]
