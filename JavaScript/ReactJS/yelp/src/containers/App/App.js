@@ -9,7 +9,7 @@ class App extends React.Component {
         history: PropTypes.object.isRequired
     };
 
-    content() {
+    get content() {
         return (
             <Router routes={this.props.routes}
                     history={this.props.history} />
@@ -25,4 +25,4 @@ class App extends React.Component {
     }
 }
 
-module.exports = App;
+export default App;
