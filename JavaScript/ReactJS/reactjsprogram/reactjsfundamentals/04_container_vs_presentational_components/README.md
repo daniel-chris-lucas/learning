@@ -1,17 +1,12 @@
-## this.props.children in React and React Router
+## React Container Components vs Presentational Components
 
-Gain access to data inside a component:
+Create PromptContainer component which asks for usernames and handlmes routing.
 
-```xml
-<Link>
-    This is some text
-</Link>
-```
+Code refactoring by exporting view presentation into Prompt component and lets
+PromptContainer handle all the logic.
 
-To read the text from inside the Link component use
+Contains:
 
-```js
-{this.props.children}
-```
-
-Checkout Main.js for Sentry implementation for logging errors.
+- Stateless functional components
+- React context
+- Dynamic routing
