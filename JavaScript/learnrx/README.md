@@ -79,3 +79,7 @@ Combine reduce() with map() to reduce multiple boxart objects to a single value:
 ### 19. Reducing with an initial value
 
 Sometimes when we reduce an array, we want the reduced value to be a different type than the items stored in the array. Let's say we have an array of videos and we want to reduce them to a single map where the key is the video id and the value is the video's title.
+
+### 20. Retrieve the id, title, and smallest box art url for every video
+
+This is a variation of the problem we solved earlier, where we retrieved the url of the boxart with a width of 150px. This time we'll use reduce() instead of filter() to retrieve the smallest box art in the boxarts array
