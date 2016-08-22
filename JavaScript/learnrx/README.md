@@ -37,3 +37,17 @@ Chain filter and map to collect the ids of videos that have a rating of 5.0
 ### 09. Flatten the movieLists array into an array of video ids
 
 Let's start by using two nested forEach loops to collect the id of every video in the two-dimensional movieLists array.
+
+### 10. Implement concatAll()
+
+Let's add a concatAll() function to the Array type. The concatAll() function iterates over each sub-array in the array and collects the results in a new, flat array.
+
+### 11. Use map() and concatAll() to project and flatten the movieLists into an array of video ids
+
+Use two nested calls to map() and one call to concatAll().
+
+Mastering the combination of map() and concatAll() is key to effective functional programming
+
+### 12. Retrieve id, title, and a 150x200 box art url for every video
+
+Create a query that selects {id, title, boxart} for every video in the movieLists. This time though, the boxart property in the result will be the url of the boxart object with dimensions of 150x200px. Solve this problem with map(), concatAll(), and filter().
