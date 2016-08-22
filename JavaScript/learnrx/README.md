@@ -63,3 +63,7 @@ Let's repeat the exercise we just performed. However this time we'll simplify th
 ### 15. Use forEach to find the largest box art
 
 Use forEach to find the largest box art. Each time we examine a new boxart we update a variable with the currently known maximumSize. If the boxart is smaller than the maximum size, we discard it. If it's larger, we keep track of it. Finally we're left with a single boxart which must necessarily be the largest.
+
+### 16. Implement reduce()
+
+Add a reduce() function to the Array type. Like map. Take note this is different from the reduce in ES5, which returns a value instead of an Array!
