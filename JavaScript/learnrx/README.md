@@ -71,3 +71,7 @@ Add a reduce() function to the Array type. Like map. Take note this is different
 ### 17. Retrieve the largest rating
 
 Use reduce function to isolate the largest value in an array of ratings
+
+### 18. Retrieve url of the largest boxart
+
+Combine reduce() with map() to reduce multiple boxart objects to a single value: the url of the largest box art.
