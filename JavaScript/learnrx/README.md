@@ -18,6 +18,10 @@ For each video, add a projected {id, title} pair to the videoAndTitlePairs array
 
 To make projections easier, let's add a map() function to the Array type. Map accepts the projection function to be applied to each item in the source array, and returns the projected array.
 
-### 05. ## Use map() to project an array of videos into an array of {id,title} pairs
+### 05. Use map() to project an array of videos into an array of {id,title} pairs
 
 Let's repeat the exercise of collecting {id, title} pairs for each video in the newReleases array, but this time we'll use our map function.
+
+### 06. Use forEach() to collect only those videos with a rating of 5.0
+
+Use forEach() to loop through the videos in the newReleases array and, if a video has a rating of 5.0, add it to the videos array.
