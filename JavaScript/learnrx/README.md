@@ -29,3 +29,11 @@ Use forEach() to loop through the videos in the newReleases array and, if a vide
 ### 07. Implement filter()
 
 To make filtering easier, let's add a filter() function to the Array type. The filter() function accepts a predicate. A predicate is a function that accepts an item in the array, and returns a boolean indicating whether the item should be retained in the new array.
+
+### 08. Query Data by Chaining Method Calls
+
+Chain filter and map to collect the ids of videos that have a rating of 5.0
+
+### 09. Flatten the movieLists array into an array of video ids
+
+Let's start by using two nested forEach loops to collect the id of every video in the two-dimensional movieLists array.
