@@ -87,3 +87,7 @@ This is a variation of the problem we solved earlier, where we retrieved the url
 ### 21. Combine videos and bookmarks by index
 
 Use a for loop to traverse the videos and bookmarks array at the same time. For each video and bookmark pair, create a {videoId, bookmarkId} pair and add it to the videoIdAndBookmarkIdPairs array
+
+### 22. Implement zip
+
+Add a static zip() function to the Array type. The zip function accepts a combiner function, traverses each array at the same time, and calls the combiner function on the current item on the left-hand-side and right-hand-side. The zip function requires an item from each array in order to call the combiner function, therefore the array returned by zip will only be as large as the smallest input array.
