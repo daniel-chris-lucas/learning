@@ -55,3 +55,7 @@ Create a query that selects {id, title, boxart} for every video in the movieList
 ### 13. Implement concatMap()
 
 Nearly every time we flatten a tree we chain map() and concatAll(). Sometimes, if we're dealing with a tree several levels deep, we'll repeat this combination many times in our code. To save on typing, let's create a concatMap function that's just a map operation, followed by a concatAll.
+
+### 14. Use concatMap() to retrieve id, title, and 150x200 box art url for every video
+
+Let's repeat the exercise we just performed. However this time we'll simplify the code by replacing the map().concatAll() calls with concatMap().
