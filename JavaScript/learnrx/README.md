@@ -83,3 +83,7 @@ Sometimes when we reduce an array, we want the reduced value to be a different t
 ### 20. Retrieve the id, title, and smallest box art url for every video
 
 This is a variation of the problem we solved earlier, where we retrieved the url of the boxart with a width of 150px. This time we'll use reduce() instead of filter() to retrieve the smallest box art in the boxarts array
+
+### 21. Combine videos and bookmarks by index
+
+Use a for loop to traverse the videos and bookmarks array at the same time. For each video and bookmark pair, create a {videoId, bookmarkId} pair and add it to the videoIdAndBookmarkIdPairs array
