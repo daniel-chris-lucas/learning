@@ -59,3 +59,7 @@ Nearly every time we flatten a tree we chain map() and concatAll(). Sometimes, i
 ### 14. Use concatMap() to retrieve id, title, and 150x200 box art url for every video
 
 Let's repeat the exercise we just performed. However this time we'll simplify the code by replacing the map().concatAll() calls with concatMap().
+
+### 15. Use forEach to find the largest box art
+
+Use forEach to find the largest box art. Each time we examine a new boxart we update a variable with the currently known maximumSize. If the boxart is smaller than the maximum size, we discard it. If it's larger, we keep track of it. Finally we're left with a single boxart which must necessarily be the largest.
