@@ -51,3 +51,7 @@ Mastering the combination of map() and concatAll() is key to effective functiona
 ### 12. Retrieve id, title, and a 150x200 box art url for every video
 
 Create a query that selects {id, title, boxart} for every video in the movieLists. This time though, the boxart property in the result will be the url of the boxart object with dimensions of 150x200px. Solve this problem with map(), concatAll(), and filter().
+
+### 13. Implement concatMap()
+
+Nearly every time we flatten a tree we chain map() and concatAll(). Sometimes, if we're dealing with a tree several levels deep, we'll repeat this combination many times in our code. To save on typing, let's create a concatMap function that's just a map operation, followed by a concatAll.
