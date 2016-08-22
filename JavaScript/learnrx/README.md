@@ -25,3 +25,7 @@ Let's repeat the exercise of collecting {id, title} pairs for each video in the 
 ### 06. Use forEach() to collect only those videos with a rating of 5.0
 
 Use forEach() to loop through the videos in the newReleases array and, if a video has a rating of 5.0, add it to the videos array.
+
+### 07. Implement filter()
+
+To make filtering easier, let's add a filter() function to the Array type. The filter() function accepts a predicate. A predicate is a function that accepts an item in the array, and returns a boolean indicating whether the item should be retained in the new array.
