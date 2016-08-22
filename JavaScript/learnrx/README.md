@@ -67,3 +67,7 @@ Use forEach to find the largest box art. Each time we examine a new boxart we up
 ### 16. Implement reduce()
 
 Add a reduce() function to the Array type. Like map. Take note this is different from the reduce in ES5, which returns a value instead of an Array!
+
+### 17. Retrieve the largest rating
+
+Use reduce function to isolate the largest value in an array of ratings
