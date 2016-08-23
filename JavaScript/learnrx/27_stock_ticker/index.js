@@ -10,8 +10,6 @@ var pricesNASDAQ = [
 ];
 
 function(pricesNASDAQ, printRecord) {
-  console.log('PRICES', pricesNASDAQ);
-  
     var microsoftPrices,
         now = new Date(),
         tenDaysAgo = new Date( now.getFullYear(), now.getMonth(), now.getDate() - 10);
