@@ -8,3 +8,7 @@ and install modules.
 ### 02. A Taste of JSX
 
 Start creating a new React component using JSX.
+
+### 03. ES6 Import Statements
+
+Import React into component file.
