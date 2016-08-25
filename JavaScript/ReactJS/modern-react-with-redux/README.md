@@ -21,3 +21,7 @@ React knows how to manipulate components but no longer renders
 components to the DOM. For this use ReactDOM.
 
 Finish the first component.
+
+### 05. Component Structure
+
+Create component structure for youtube application.
