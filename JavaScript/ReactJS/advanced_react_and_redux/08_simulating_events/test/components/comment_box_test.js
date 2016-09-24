@@ -22,7 +22,7 @@ describe('CommentBox', () => {
 
     describe('entering some text', () => {
         beforeEach(() => {
-            
+            component.find('textarea').simulate('change', 'new comment');
         });
 
         it('shows that text in the textarea', () => {
