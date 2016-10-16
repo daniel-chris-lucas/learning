@@ -44,7 +44,7 @@ function getItem() {
 //
 // public static fromPromise(promise:Promise<T>, scheduler:Scheduler):Observable<T>
 //
-// Converts a Pormise to an Observable
+// Converts a Promise to an Observable
 
 Rx.Observable.fromPromise(getItem())
     .subscribe(createSubscriber('promise'));
