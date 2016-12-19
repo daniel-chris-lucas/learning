@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key Detection</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+    <p><em>Psst: what is the Konami code?</em> 💁</p>
+    <script>
+        const ARROW_UP = 38;
+        const ARROW_DOWN = 40;
+        const ARROW_LEFT = 37;
+        const ARROW_RIGHT = 39;
+        const CHAR_A = 65;
+        const CHAR_B = 66;
+
+        const pressed = [];
+        const secretCode = [
+            ARROW_UP,
+            ARROW_UP,
+            ARROW_DOWN,
+            ARROW_DOWN,
+            ARROW_LEFT,
+            ARROW_RIGHT,
+            ARROW_LEFT,
+            ARROW_RIGHT,
+            CHAR_B,
+            CHAR_A
+        ].join('');
+
+        window.addEventListener('keyup', e => {
+            pressed.push(e.keyCode);
+            pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+            if (pressed.join('').includes(secretCode)) {
+                window.setInterval(() => {
+                    cornify_add();
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
