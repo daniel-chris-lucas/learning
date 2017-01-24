@@ -1,0 +1,77 @@
+body {
+    background-color: #0a0a17;
+}
+
+#cover-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+#cover-image {
+    background: url(http://res.cloudinary.com/dsmu45u1e/image/upload/v1482880590/maxresdefault_prowln.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#article-content-wrapper {
+    position: relative;
+    margin: -350px auto 20px auto;
+    min-height: 200px;
+    background-color: #fff;
+    max-width: 980px;
+    padding: 15px 30px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: Lora, serif;
+}
+
+h1 {
+    font-size: 3.8em;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #ccc;
+    font-style: italic;
+}
+
+.title-type {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.portrait {
+    margin-top: 25px;
+}
+
+.portrait img {
+    margin: auto;
+}
+
+/*
+Media Queries
+ */
+@media (max-width: 767px) {
+    #article-content-wrapper {
+        margin-top: -60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+    #article-content-wrapper {
+        margin-top: -200px;
+    }
+}
