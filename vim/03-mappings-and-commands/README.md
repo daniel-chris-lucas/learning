@@ -6,13 +6,14 @@
 - / = search
 - :echo $MYVIMRC = Display path of vimrc file
 - :tabedit = open in new tab
-- tabc = close tab
+- :tabc = close tab
 - :bd = destroy buffer
 - zz = move cursor to center of screen
 - [Shift]+V y p = Copy line then paste
 - yyp = Copy line then paste
 - . = Redo last command
 - gg = Return cursor to beginning
+- G = Move cursor to last line
 
 ### Vimrc file:
 

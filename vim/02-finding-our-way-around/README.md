@@ -6,6 +6,12 @@
 - :q = quit
 - :e = edit
 
+### Modes
+
+- i = insert mode
+- v = visual mode
+- V = visual mode + select entire line
+
 ### Navigation
 
 - h = left
