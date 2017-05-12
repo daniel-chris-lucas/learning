@@ -8,7 +8,13 @@
 
 ### Plugins
 
-[Snipmate](https://github.com/msanders/snipmate.vim)
+Deprecated - [Snipmate](https://github.com/msanders/snipmate.vim)
+
+[vim-snipmate](https://github.com/garbas/vim-snipmate)
+
+[vim-addon-mw-utils](https://github.com/marcweber/vim-addon-mw-utils)
+
+[tlib_vim](https://github.com/tomtom/tlib_vim)
 
 Snippets go in the ~/.vim/snippets directory.
 
