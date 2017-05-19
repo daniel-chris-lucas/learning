@@ -1,0 +1,18 @@
+---
+    - hosts: database
+      become: true
+      tasks:
+          - name: install mysql-server
+            apt: name=mysql-server state=present update_cache=yes
+
+          - name: ensure mysql started
+            service: name=mysql state=started enabled=yes
+
+          - name: ensure mysql lintening on all ports
+            lineinfile: dest=/etc/mysql/my.cnf regexp=^bind-address
+                        line="bind-address = 0.0.0.0"
+            notify: restart mysql
+
+      handlers:
+          - name: restart mysql
+            service: name=mysql state=restarted
