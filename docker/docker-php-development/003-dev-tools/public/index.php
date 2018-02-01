@@ -11,8 +11,8 @@
 |
 */
 
-$world = "World";
-echo "Hello" . $world;
+phpinfo();
+exit();
 
 $app = require __DIR__.'/../bootstrap/app.php';
 

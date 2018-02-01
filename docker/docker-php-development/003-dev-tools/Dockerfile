@@ -1,4 +1,4 @@
-FROM php:7.1.9-apache
+FROM php:7.1-apache
 
 LABEL maintainer="Daniel Lucas"
 COPY .docker/php/php.ini /usr/local/etc/php/
@@ -10,5 +10,10 @@ RUN docker-php-ext-install pdo_mysql opcache \
     && a2enmod rewrite
 
 COPY .docker/php/xdebug-dev.ini /usr/local/etc/php/conf.d/xdebug-dev.ini
+
+RUN cp -R /usr/local/etc/php/conf.d \
+    /usr/local/etc/php/conf.d-dev \
+    && rm -f /usr/local/etc/php/conf.d/*-dev.ini \
+    && rm -f /usr/local/etc/php/conf.d/*xdebug.ini
 
 RUN chown -R www-data:www-data /srv/app
