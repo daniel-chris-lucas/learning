@@ -1,0 +1,8 @@
+{
+    "bitbucket-oauth": {
+        "bitbucket.org": {
+            "consumer-key": "%consumer-key%",
+            "consumer-secret": "%consumer-secret%"
+        }
+    }
+}

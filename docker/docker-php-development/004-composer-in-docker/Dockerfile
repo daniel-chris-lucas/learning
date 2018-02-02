@@ -11,6 +11,19 @@ RUN apt-get -yqq update \
     && chmod +x /usr/local/bin/composer \
     && composer --version
 
+# Cache Composer dependencies
+WORKDIR /tmp
+ADD app/composer.json app/composer.lock app/auth.json /tmp/
+RUN mkdir -p database/seeds \
+    mkdir -p database/factories \
+    && composer install \
+        --no-interaction \
+        --no-plugins \
+        --no-scripts \
+        --prefer-dist \
+    && rm -rf composer.json composer.lock auth.json \
+        database/ vendor/
+
 # Add the project
 ADD app /var/www/html
 

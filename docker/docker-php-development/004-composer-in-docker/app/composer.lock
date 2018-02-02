@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f2120fa77d42a42b4210cdbe1c114e2",
+    "content-hash": "9a70246366d6dcb6e77f5a68fd6ba002",
     "packages": [
+        {
+            "name": "daniel-chris-lucas/docker-private-package",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/daniel-chris-lucas/docker-private-package.git",
+                "reference": "8cf0e381ccea403db148bb405e4bfbbb83a51cee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/daniel-chris-lucas/docker-private-package/get/8cf0e381ccea403db148bb405e4bfbbb83a51cee.zip",
+                "reference": "8cf0e381ccea403db148bb405e4bfbbb83a51cee",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DanielChrisLucas\\DockerPrivatePackage\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Lucas"
+                }
+            ],
+            "description": "An example private composer package",
+            "homepage": "https://bitbucket.org/daniel-chris-lucas/docker-private-package",
+            "support": {
+                "source": "https://bitbucket.org/daniel-chris-lucas/docker-private-package/src/8cf0e381ccea403db148bb405e4bfbbb83a51cee/?at=master"
+            },
+            "time": "2018-02-02T19:47:44+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -3906,7 +3946,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "daniel-chris-lucas/docker-private-package": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
