@@ -1,0 +1,12 @@
+http://{{getenv "/example.com/hostname"}}:80
+root /srv/app/public
+gzip
+fastcgi / 127.0.0.1:9000 php
+rewrite {
+    regexp .*
+    ext /
+    to /index.php?{query}
+}
+
+log stdout
+errors stdout

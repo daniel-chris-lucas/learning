@@ -1,0 +1,9 @@
+[template]
+src = "caddyfile.tmpl"
+dest = "/etc/Caddyfile"
+owner = "www-data"
+mode = "0644"
+keys = [
+    "/example.com/hostname"
+]
+reload_cmd = "pkill -USR1 caddy"
