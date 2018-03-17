@@ -13,7 +13,8 @@
     export default {
         data() {
             return {
-                processing: false
+                processing: false,
+                task_id: null
             }
         },
         mounted() {
@@ -21,8 +22,17 @@
         },
         methods: {
             createJob() {
-                axios.post('/job').then(() => {
+                var vm = this;
+                axios.post('/job').then((response) => {
                     this.processing = true;
+                    this.task_id = response.data.job;
+
+                    Echo.private('user.task.' + vm.task_id).listen('TaskCompleted', (e) => {
+                        // e.taskId
+                        vm.processing = false;
+                        vm.task_id = null;
+                        // Show a complete task?
+                    });
                 });
             }
         }

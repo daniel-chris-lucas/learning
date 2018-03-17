@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Queue;
 use App\Jobs\LongRunningJob;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,10 @@ class JobsController extends Controller
 
     public function startJob()
     {
-        dispatch(new LongRunningJob);
+        // dispatch(new LongRunningJob);
 
-        return ['status' => 'success'];
+        return [
+            'job' => Queue::push(new LongRunningJob),
+        ];
     }
 }

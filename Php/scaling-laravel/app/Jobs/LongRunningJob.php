@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Events\TaskCompleted;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -20,6 +21,9 @@ class LongRunningJob implements ShouldQueue
     public function handle()
     {
         sleep(3);
+
+        event(new TaskCompleted($this->job->getJobId()));
+
         return true;
     }
 }
