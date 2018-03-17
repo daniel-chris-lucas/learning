@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Queue;
+use App\Task;
 use App\Jobs\LongRunningJob;
 use Illuminate\Http\Request;
 
@@ -13,12 +13,23 @@ class JobsController extends Controller
         $this->middleware('auth');
     }
 
+    public function getTasks()
+    {
+        return Task::where('user_id', auth()->user()->id)
+            ->whereNull('completed_at')
+            ->get();
+    }
+
     public function startJob()
     {
-        // dispatch(new LongRunningJob);
+        $task = Task::create([
+            'user_id' => auth()->user()->id,
+            'name' => 'LongRunningJob',
+            'created_at' => new \DateTime
+        ]);
 
-        return [
-            'job' => Queue::push(new LongRunningJob),
-        ];
+        dispatch(new LongRunningJob($task->id));
+
+        return $task;
     }
 }

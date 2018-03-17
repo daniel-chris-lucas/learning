@@ -52263,26 +52263,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            processing: false,
-            task_id: null
+            tasks: []
         };
     },
-    mounted: function mounted() {},
+    mounted: function mounted() {
+        this.getTasks();
+    },
 
     methods: {
-        createJob: function createJob() {
-            var _this = this;
+        getTasks: function getTasks() {
+            var vm = this;
+            axios.get('/tasks').then(function (response) {
+                vm.tasks = response.data;
 
+                _.each(vm.tasks, function (task) {
+                    Echo.private('user.task.' + task.id).listen('TaskCompleted', function (e) {
+                        vm.getTasks();
+                    });
+                });
+            });
+        },
+        createJob: function createJob() {
             var vm = this;
             axios.post('/job').then(function (response) {
-                _this.processing = true;
-                _this.task_id = response.data.job;
+                vm.tasks.push(response.data);
 
-                Echo.private('user.task.' + vm.task_id).listen('TaskCompleted', function (e) {
-                    // e.taskId
-                    vm.processing = false;
-                    vm.task_id = null;
-                    // Show a complete task?
+                Echo.private('user.task.' + response.data.id).listen('TaskCompleted', function (e) {
+                    vm.getTasks();
                 });
             });
         }
@@ -52298,7 +52305,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.processing == false
+    _vm.tasks.length == 0
       ? _c(
           "button",
           {
