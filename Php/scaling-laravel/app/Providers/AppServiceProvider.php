@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Queue\SqsConnector;
+use Queue;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Queue::extend('my-sqs', function () {
+            return new SqsConnector;
+        });
     }
 
     /**
