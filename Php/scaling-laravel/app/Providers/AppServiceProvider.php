@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Queue\SqsConnector;
 use Queue;
+use App\Queue\SqsConnector;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

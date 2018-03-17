@@ -16,6 +16,8 @@ class TaskCompleted implements ShouldBroadcast
 
     public $taskId;
 
+    public $connection = 'sqs-secondary';
+
     /**
      * Create a new event instance.
      *
