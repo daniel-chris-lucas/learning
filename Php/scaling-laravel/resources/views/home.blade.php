@@ -17,6 +17,10 @@
                     You are logged in!
                 </div>
             </div>
+
+            <div class="card" style="margin-top: 25px;">
+                <process-job></process-job>
+            </div>
         </div>
     </div>
 </div>
