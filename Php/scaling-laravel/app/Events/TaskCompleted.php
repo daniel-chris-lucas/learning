@@ -16,7 +16,7 @@ class TaskCompleted implements ShouldBroadcast
 
     public $taskId;
 
-    public $connection = 'sqs-secondary';
+    public $connection = 'sqs-secondary'; // Don't use for redis/horizon
 
     /**
      * Create a new event instance.

@@ -28,6 +28,7 @@ class JobsController extends Controller
             'created_at' => new \DateTime
         ]);
 
+        // dispatch(new LongRunningJob($task->id)); // Use for redis/horizon
         dispatch(new LongRunningJob($task->id))
             ->onQueue('scaling-laravel-secondary-production');
 
