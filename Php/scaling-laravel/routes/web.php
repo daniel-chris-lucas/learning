@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/job', 'JobsController@startJob');
 Route::get('/tasks', 'JobsController@getTasks');
+Route::resource('/profile/image', 'ProfileImageController');
 
 Route::get('/headers', function () {
     return view('headers');

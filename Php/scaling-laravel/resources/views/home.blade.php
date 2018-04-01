@@ -21,6 +21,9 @@
             <div class="card" style="margin-top: 25px;">
                 <process-job></process-job>
             </div>
+            <div class="card" style="margin-top: 25px;">
+                <profile-image profile_image="{{ optional($profileImage)->path }}"></profile-image>
+            </div>
         </div>
     </div>
 </div>

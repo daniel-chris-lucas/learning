@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding: 15px;">
         <button class="btn btn-success" @click.prevent="createJob" v-if="tasks.length == 0">
             <span class="oi oi-contrast"></span> Kick Off Long-Running Job
         </button>

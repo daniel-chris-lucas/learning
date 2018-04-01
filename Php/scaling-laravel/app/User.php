@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Task::class);
     }
+
+    public function profileImage()
+    {
+        return $this->hasOne(ProfileImage::class);
+    }
 }
