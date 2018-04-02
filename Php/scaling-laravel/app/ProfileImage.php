@@ -12,4 +12,12 @@ class ProfileImage extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function toArray()
+    {
+        return [
+            'id'   => $this->id,
+            'path' => $this->path,
+        ];
+    }
 }

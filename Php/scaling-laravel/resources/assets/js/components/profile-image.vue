@@ -1,7 +1,7 @@
 <template>
     <div style="padding: 15px;">
-        <div class="form-group" v-if="path">
-            <img v-bind:src="path" class="img-circle" style="max-width: 200px;" />
+        <div class="form-group" v-if="image">
+            <img v-bind:src="imageUri" class="img-circle" style="max-width: 200px;" />
         </div>
         <div class="form-group">
             <label for="profile" style="display: block; font-weight: bold;">Upload Profile Image</label>
@@ -16,13 +16,18 @@
         props: ['profile_image'],
         data() {
             return {
-                path: null,
+                image: null,
             }
         },
         mounted() {
             // When a user has a profile image already
             if (this.profile_image) {
-                this.path = this.profile_image;
+                this.image = this.profile_image;
+            }
+        },
+        computed: {
+            imageUri() {
+                return '/profile/image/' + this.image;
             }
         },
         methods: {
@@ -33,7 +38,7 @@
 
                 axios.post('/profile/image', data)
                     .then(function (res) {
-                        vm.path = res.data.path;
+                        vm.image = res.data.id;
                     }).catch(function (err) {
                         console.log('UPLOAD FAILED', err.message);
                 });

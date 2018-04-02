@@ -52410,16 +52410,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: ['profile_image'],
     data: function data() {
         return {
-            path: null
+            image: null
         };
     },
     mounted: function mounted() {
         // When a user has a profile image already
         if (this.profile_image) {
-            this.path = this.profile_image;
+            this.image = this.profile_image;
         }
     },
 
+    computed: {
+        imageUri: function imageUri() {
+            return '/profile/image/' + this.image;
+        }
+    },
     methods: {
         upload: function upload() {
             var vm = this;
@@ -52427,7 +52432,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             data.append('profile', document.getElementById('profile').files[0]);
 
             axios.post('/profile/image', data).then(function (res) {
-                vm.path = res.data.path;
+                vm.image = res.data.id;
             }).catch(function (err) {
                 console.log('UPLOAD FAILED', err.message);
             });
@@ -52444,12 +52449,12 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticStyle: { padding: "15px" } }, [
-    _vm.path
+    _vm.image
       ? _c("div", { staticClass: "form-group" }, [
           _c("img", {
             staticClass: "img-circle",
             staticStyle: { "max-width": "200px" },
-            attrs: { src: _vm.path }
+            attrs: { src: _vm.imageUri }
           })
         ])
       : _vm._e(),

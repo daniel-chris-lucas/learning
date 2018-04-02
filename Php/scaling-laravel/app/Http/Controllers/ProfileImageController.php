@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\ProfileImage;
+use App\Http\Responses\S3FileStream;
+
 use Illuminate\Http\Request;
 
 class ProfileImageController extends Controller
@@ -44,31 +46,32 @@ class ProfileImageController extends Controller
             'profile' => 'required|image'
         ]);
 
-        $path = str_replace(
-            'public',
-            'storage',
-            $request->file('profile')->store('public')
-        );
+        $path = $request->file('profile')->store('profile', 's3');
 
-        ProfileImage::updateOrCreate([
+        $image = ProfileImage::updateOrCreate([
             'user_id' => auth()->user()->id
         ], [
             'user_id' => auth()->user()->id,
             'path' => $path
         ]);
 
-        return ['path' => $path];
+        return $image;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     *
+     * @return void
      */
     public function show($id)
     {
-        //
+        $image = ProfileImage::where('user_id', auth()->user()->id)
+            ->findOrFail($id);
+
+        // download image from s3 and send to user's browser
+        return (new S3FileStream($image))->output();
     }
 
     /**
