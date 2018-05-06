@@ -1,0 +1,4 @@
+services:
+#    car.example:
+#        class: CarBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
