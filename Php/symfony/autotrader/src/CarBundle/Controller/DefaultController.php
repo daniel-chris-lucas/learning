@@ -12,6 +12,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('CarBundle:Default:index.html.twig');
+        $cars = [
+            ['make' => 'BMW', 'name' => 'X1'],
+            ['make' => 'Fiat', 'name' => 'Croma'],
+            ['make' => 'Audi', 'name' => 'Q7'],
+        ];
+
+        return $this->render('CarBundle:Default:index.html.twig', ['cars' => $cars]);
     }
 }
