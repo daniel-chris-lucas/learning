@@ -15,8 +15,8 @@
         </tr>
         {% for car in cars %}
             <tr>
-                <td>{{ car.make }}</td>
-                <td>{{ car.name }}</td>
+                <td>{{ car.make.name }}</td>
+                <td>{{ car.model.name }}</td>
                 <td><a href="{{ url('show_car', {id: car.id}) }}">Show details</a></td>
             </tr>
         {% endfor %}

@@ -2,10 +2,10 @@
 
 {% block title %}
     {{ parent() }}
-    {{ car.name }}
+    {{ car.make.name }}
 {% endblock %}
 {% block body %}
-    <h1>{{ car.make }} {{ car.name }}</h1>
+    <h1>{{ car.make.name }} {{ car.model.name }}</h1>
     <table class="table">
         <tr>
             <td>Price</td>
