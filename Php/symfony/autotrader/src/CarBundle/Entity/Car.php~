@@ -192,28 +192,4 @@ class Car
     {
         return $this->year;
     }
-
-    /**
-     * Set navigation
-     *
-     * @param boolean $navigation
-     *
-     * @return Car
-     */
-    public function setNavigation($navigation)
-    {
-        $this->navigation = $navigation;
-
-        return $this;
-    }
-
-    /**
-     * Get navigation
-     *
-     * @return boolean
-     */
-    public function getNavigation()
-    {
-        return $this->navigation;
-    }
 }
