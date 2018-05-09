@@ -35,6 +35,12 @@ class Car
      */
     private $make;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
 
     /**
      * Get id
@@ -92,6 +98,30 @@ class Car
     public function getMake()
     {
         return $this->make;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Car
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
 
