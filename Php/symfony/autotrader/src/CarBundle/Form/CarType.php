@@ -31,6 +31,7 @@ class CarType extends AbstractType
                 ]
             ])
             ->add('navigation')
+            ->add('promote')
             ->add('description')
             ->add('model', EntityType::class, [
                 'required' => true,
