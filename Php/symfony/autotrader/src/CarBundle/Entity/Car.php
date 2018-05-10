@@ -57,6 +57,13 @@ class Car
     private $navigation;
 
     /**
+     * @var  boolean
+     *
+     * @ORM\Column(name="promote", type="boolean")
+     */
+    private $promote;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="description", type="text", nullable=true)
@@ -215,5 +222,25 @@ class Car
     public function getMake()
     {
         return $this->make;
+    }
+
+    /**
+     * @param bool $promote
+     *
+     * @return Car
+     */
+    public function setPromote($promote)
+    {
+        $this->promote = $promote;
+
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPromote()
+    {
+        return $this->promote;
     }
 }

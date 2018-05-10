@@ -11,6 +11,7 @@
                 <th>Year</th>
                 <th>Navigation</th>
                 <th>Description</th>
+                <th>Promoted</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                 <td>{{ car.year }}</td>
                 <td>{% if car.navigation %}Yes{% else %}No{% endif %}</td>
                 <td>{{ car.description }}</td>
+                <td><span class="glyphicon glyphicon-{% if car.promote %}ok-circle{% else %}ban-circle{% endif %}"></span></td>
                 <td>
                     <ul>
                         <li>
