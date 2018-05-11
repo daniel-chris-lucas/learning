@@ -3,10 +3,12 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\RouterInterface;
 
 /**
  * Class BlogController
@@ -24,23 +26,33 @@ class BlogController extends AbstractController
      * @var \Symfony\Component\HttpFoundation\Session\SessionInterface
      */
     private $session;
+    /**
+     * @var \Symfony\Component\Routing\RouterInterface
+     */
+    private $router;
 
     /**
      * BlogController constructor.
      *
      * @param \Twig_Environment                                          $twig
      * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
+     * @param \Symfony\Component\Routing\RouterInterface                 $router
      */
-    public function __construct(\Twig_Environment $twig, SessionInterface $session)
+    public function __construct(
+        \Twig_Environment $twig,
+        SessionInterface $session,
+        RouterInterface $router
+    )
     {
         $this->twig = $twig;
         $this->session = $session;
+        $this->router = $router;
     }
 
     /**
-     * @Route("/{name}", name="blog_index")
+     * @Route("/", name="blog_index")
      */
-    public function index($name)
+    public function index()
     {
         $html = $this->twig->render(
             'blog/index.html.twig',
@@ -63,6 +75,8 @@ class BlogController extends AbstractController
             'text' => 'Some random text nr ' . rand(1, 500),
         ];
         $this->session->set('posts', $posts);
+
+        return new RedirectResponse($this->router->generate('blog_index'));
     }
 
     /**
@@ -84,6 +98,6 @@ class BlogController extends AbstractController
             ]
         );
 
-        return Response($html);
+        return new Response($html);
     }
 }
